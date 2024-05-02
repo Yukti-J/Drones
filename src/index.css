@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+#root{
+  margin: 0;
+  padding: 0;
+  max-width: unset;
+  text-align: unset;
+}
+.buy{
+  background-image: url('./assets/buy.png');
+  background-size: cover;
+  background-position: center;
+}
+.buy:hover{
+  /* image grow */
+  transform: scale(1.05);
+  cursor:pointer;
+}
+.pilot{
+  background-image: url('./assets/pilot.png');
+  background-size: cover;
+  background-position: center;
+}
+.pilot:hover{
+  transform: scale(1.05);
+  cursor:pointer;
+}
