@@ -2,32 +2,35 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
-#root{
+#root {
   margin: 0;
   padding: 0;
   max-width: unset;
   text-align: unset;
 }
-.buy{
-  background-image: url('./assets/buy.png');
+.buy {
+  background-image: url("./assets/buy.png");
   background-size: cover;
   background-position: center;
+  transition: 0.5s all ease-in-out;
 }
-.buy:hover{
+.buy:hover {
   /* image grow */
-  transform: scale(1.05);
-  cursor:pointer;
+
+  transform: scale(0.9);
+  cursor: pointer;
 }
-.pilot{
-  background-image: url('./assets/pilot.png');
+.pilot {
+  background-image: url("./assets/pilot.png");
   background-size: cover;
   background-position: center;
+  transition: 0.5s all ease-in-out;
 }
-.pilot:hover{
-  transform: scale(1.05);
-  cursor:pointer;
+.pilot:hover {
+  transform: scale(0.9);
+  cursor: pointer;
 }
