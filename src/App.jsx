@@ -10,11 +10,42 @@ import Whyus from "./components/Whyus";
 import HomePage from "./components/HomePage";
 import SignUpPage from "./components/SignUpPage";
 import SignInPage from "./components/SignInPage";
+import ProductPage from "./components/ProductPage";
+import ContactPage from "./components/ContactPage";
 function App() {
   return (
     <>
       <Routes>
-        <Route exact path="/" element={<HomePage />} />
+        {/* Below are the routes with Navbar Component */}
+        <Route
+          exact
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <HomePage />
+            </>
+          }
+        />
+        <Route
+          path="/products"
+          element={
+            <>
+              <Navbar />
+              <ProductPage />
+            </>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <>
+              <Navbar />
+              <ContactPage />
+            </>
+          }
+        />
+        {/* Below are the routes without Navbar Component */}
         <Route path="/signup" element={<SignUpPage />} />
         <Route path="/signin" element={<SignInPage />} />
       </Routes>
