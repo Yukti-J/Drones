@@ -5,11 +5,11 @@ import logoblack from '../assets/logoblack.png'
 const Footer = () => {
   return (
     <footer className="w-full bg-teal-100 p-8 text-teal-800">
-    <div className="flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 px-4 bg-white text-center md:justify-between">
+    <div className="flex bg-teal-100 flex-col md:flex-row items-center justify-center gap-y-6 gap-x-12 px-4 text-center md:justify-between">
       <img src={logoblack} alt="logo-ct" className="w-40" />
 
       <div className="flex flex-col justify-end">
-      <ul className="flex flex-wrap items-center gap-y-2 gap-x-8 mb-5 text-teal-800">
+      <ul className="flex flex-col sm:flex-row flex-wrap items-center gap-y-2 gap-x-8 mb-5 text-teal-800">
         <li>
           <Typography
             as="a"
@@ -51,7 +51,7 @@ const Footer = () => {
           </Typography>
         </li>
       </ul>
-      <div className="flex gap-4 sm:justify-center self-end text-teal-800">
+      <div className="flex gap-4 sm:justify-center self-center md:self-end text-teal-800">
             <Typography as="a" href="#" className="opacity-80 transition-opacity hover:opacity-100">
               <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path
