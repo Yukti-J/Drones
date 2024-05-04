@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import logoblack from '../assets/logoblack.png';
 import { FaAlignJustify } from "react-icons/fa";
+=======
+import React from "react";
+import logoblack from "../assets/logoblack.png";
+import { Link } from "react-router-dom";
+>>>>>>> 988d8b8f023c7deb46f6b82c3517b20688f008d4
 
 const Navbar = () => {
   const [activeTab, setActiveTab] = useState('home');
@@ -18,6 +24,7 @@ const Navbar = () => {
           <img className="w-20" src={logoblack} alt="Logo" />
         </div>
 
+<<<<<<< HEAD
         <div className="hidden lg:flex text-md space-x-6 items-center font-rubik">
           <button
             id="home"
@@ -54,6 +61,22 @@ const Navbar = () => {
 
         <div className="lg:hidden menu-icon text-lg hover:cursor-pointer ">
           <button onClick={() => setMenu(!menu)}><FaAlignJustify /></button>
+=======
+        <div className="flex text-md space-x-6 items-center font-rubik">
+          <a className="hover:cursor-pointer hover:text-gray-600">Home</a>
+          <a className="hover:cursor-pointer hover:text-gray-600">Products</a>
+          <a className="hover:cursor-pointer hover:text-gray-600">Contact</a>
+        </div>
+
+        <div className="signup">
+          <Link to="/signup">
+            {" "}
+            <button className="font-rubik border-black border-2 rounded-md px-2 py-1 hover:bg-black hover:text-white">
+              {" "}
+              Sign Up
+            </button>
+          </Link>
+>>>>>>> 988d8b8f023c7deb46f6b82c3517b20688f008d4
         </div>
       </nav>
       {/* menu transition */}

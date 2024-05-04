@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
-#root{
+#root {
   margin: 0;
   padding: 0;
   max-width: unset;
@@ -14,18 +14,20 @@
 }
 .buy{
   background-image: url('./assets/buy.png');
+  background-size: cover;
+  background-position: center;
+}
+.buy:hover{
+  /* image grow */
+  transform: scale(1.05);
+  cursor:pointer;
 }
 .pilot{
   background-image: url('./assets/pilot.png');
-}
-.buy:hover, .pilot:hover {
-  transform: scale(0.99);
-  cursor: pointer;
-  transition: transform 0.3s ease; /* Add transition for smooth scaling */
-}
-.buy, .pilot {
-  background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
-  aspect-ratio: 1/1; 
+  background-position: center;
+}
+.pilot:hover{
+  transform: scale(1.05);
+  cursor:pointer;
 }
