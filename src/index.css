@@ -27,7 +27,14 @@
   background-size: cover;
   background-position: center;
 }
-.pilot:hover{
-  transform: scale(1.05);
-  cursor:pointer;
+.buy:hover, .pilot:hover {
+  transform: scale(0.99);
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+.buy, .pilot {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  aspect-ratio: 1/1; 
 }
