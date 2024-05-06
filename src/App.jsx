@@ -1,17 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Features from "./components/Features";
 import Footer from "./components/Footer";
-import Home from "./components/Home";
 import Navbar from "./components/Navbar";
-import Products from "./components/Products";
-import Services from "./components/Services";
-import Whyus from "./components/Whyus";
 import HomePage from "./components/HomePage";
 import SignUpPage from "./components/SignUpPage";
 import SignInPage from "./components/SignInPage";
 import ProductPage from "./components/ProductPage";
 import ContactPage from "./components/ContactPage";
+import SingleProductPage from "./components/SingleProductPage";
 function App() {
   return (
     <>
@@ -33,6 +29,16 @@ function App() {
             <>
               <Navbar route="products" />
               <ProductPage />
+              <Footer />
+            </>
+          }
+        />
+        <Route
+          path="/products/:id"
+          element={
+            <>
+              <Navbar route="products" />
+              <SingleProductPage />
               <Footer />
             </>
           }
