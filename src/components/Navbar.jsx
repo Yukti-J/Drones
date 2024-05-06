@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logoblack from "../assets/logoblack.png";
 import { FaAlignJustify } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
-  const [activeTab, setActiveTab] = useState("home");
+const Navbar = (props) => {
+  const [activeTab, setActiveTab] = useState(props.route);
   const [menu, setMenu] = useState(false);
   const navigate = useNavigate();
   const handleActive = (id) => {
@@ -16,6 +16,9 @@ const Navbar = () => {
     }
   };
 
+  useEffect(() => {
+    setActiveTab(props.route);
+  })
   return (
     <div className="navbar w-full bg-white z-10">
       {/* Flex container with Logo, three links and sign up button rubik font*/}

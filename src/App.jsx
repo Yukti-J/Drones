@@ -22,7 +22,7 @@ function App() {
           path="/"
           element={
             <>
-              <Navbar />
+              <Navbar route="home" />
               <HomePage />
             </>
           }
@@ -31,8 +31,9 @@ function App() {
           path="/products"
           element={
             <>
-              <Navbar />
+              <Navbar route="products" />
               <ProductPage />
+              <Footer />
             </>
           }
         />
@@ -40,7 +41,7 @@ function App() {
           path="/contact"
           element={
             <>
-              <Navbar />
+              <Navbar route="contact" />
               <ContactPage />
             </>
           }
