@@ -29,7 +29,7 @@ function ContactPage() {
               class="w-full p-0 font-sans text-base antialiased font-light leading-relaxed text-gray-700 h-max"
               data-value="card"
             >
-              <form class="flex flex-col p-2 md:p-0 gap-2 md:gap-4 mt-12">
+              <form class="flex flex-col p-2 md:p-0 gap-2 md:gap-4 mt-6">
                 <div>
                   <p class="block mb-2 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
                     Full Name
