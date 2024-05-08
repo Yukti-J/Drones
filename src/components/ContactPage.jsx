@@ -21,7 +21,11 @@ function ContactPage() {
         </p>
       </div>
       <div className="flex items-center justify-evenly  ">
-        <img src={contact} alt="" className="hidden md:block" />
+        <img
+          src={contact}
+          alt=""
+          className="hidden md:block md:w-1/3 p-0 md:p-5 "
+        />
         <div className="relative h-auto flex w-full max-w-[24rem] flex-col ">
           <div class="relative block  overflow-hidden !overflow-x-hidden !overflow-y-visible bg-transparent">
             <div
@@ -29,7 +33,7 @@ function ContactPage() {
               class="w-full p-0 font-sans text-base antialiased font-light leading-relaxed text-gray-700 h-max"
               data-value="card"
             >
-              <form class="flex flex-col p-2 md:p-0 gap-2 md:gap-4 mt-6">
+              <form class="flex flex-col p-2 md:p-0 gap-2 md:gap-4 mt-6 md:mt-12">
                 <div>
                   <p class="block mb-2 font-sans text-sm antialiased font-medium leading-normal text-blue-gray-900">
                     Full Name
