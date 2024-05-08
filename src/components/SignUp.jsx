@@ -8,7 +8,7 @@ function SignUp() {
   const [password, setPassword] = useState("");
 
   return (
-    <div className="relative h-min flex w-full max-w-[24rem] flex-col rounded-3xl bg-white bg-clip-border text-gray-700 shadow-md">
+    <div className="relative h-min flex w-screen md:w-full max-w-[24rem] flex-col rounded-3xl bg-white bg-clip-border text-gray-700 shadow-md">
       <div className=" relative h-min grid px-4 m-0 overflow-hidden text-center text-black place-items-center rounded-xl  shadow-gray-900/20">
         <div className="h-3 p-6 mb-4 text-white">
           <img src={logo} alt="" className="h-12" />
