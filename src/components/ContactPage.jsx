@@ -7,6 +7,9 @@ function ContactPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (
