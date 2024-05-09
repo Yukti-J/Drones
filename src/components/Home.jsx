@@ -15,7 +15,7 @@ const Home = () => {
             Discover Your Perfect Flight
           </p>
           <button
-            onClick={() => navigate("/signup")}
+            onClick={() => navigate("/products")}
             className="bg-teal-500 md:text-xl rounded-md px-10 py-2 tracking-wide text-white m-8 hover:bg-teal-200 hover:text-black"
           >
             Get Started
