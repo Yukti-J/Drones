@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import logoblack from "../assets/logoblack.png";
 import { FaAlignJustify } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../UserContext";
 
 const Navbar = (props) => {
+  // Context Initialization
+  const { userInfo } = useContext(UserContext);
+
   const [activeTab, setActiveTab] = useState(props.route);
   const [menu, setMenu] = useState(false);
   const navigate = useNavigate();
@@ -18,7 +22,7 @@ const Navbar = (props) => {
 
   useEffect(() => {
     setActiveTab(props.route);
-  })
+  });
   return (
     <div className="navbar w-full bg-white z-10">
       {/* Flex container with Logo, three links and sign up button rubik font*/}
@@ -67,12 +71,18 @@ const Navbar = (props) => {
         </div>
 
         <div className="hidden lg:block signup">
-          <button
-            onClick={() => handleActive("signup")}
-            className="font-rubik border-black border-2 rounded-md px-2 py-1 hover:bg-black hover:text-white"
-          >
-            Sign Up
-          </button>
+          {userInfo.name == undefined ? (
+            <button
+              onClick={() => handleActive("signup")}
+              className="font-rubik border-black border-2 rounded-md px-2 py-1 hover:bg-black hover:text-white"
+            >
+              Sign Up
+            </button>
+          ) : (
+            <button className="font-rubik border-black border-2 rounded-md px-2 py-1 ">
+              Welcome: {userInfo.name}
+            </button>
+          )}
         </div>
 
         <div className="lg:hidden menu-icon text-lg hover:cursor-pointer ">

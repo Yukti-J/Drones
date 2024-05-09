@@ -8,56 +8,10 @@ import SignInPage from "./components/SignInPage";
 import ProductPage from "./components/ProductPage";
 import ContactPage from "./components/ContactPage";
 import SingleProductPage from "./components/SingleProductPage";
+import { UserContextProvider } from "./UserContext";
+import Main from "./components/Main";
 function App() {
-  return (
-    <>
-      <Routes>
-        {/* Below are the routes with Navbar Component */}
-        <Route
-          exact
-          path="/"
-          element={
-            <>
-              <Navbar route="home" />
-              <HomePage />
-            </>
-          }
-        />
-        <Route
-          path="/products"
-          element={
-            <>
-              <Navbar route="products" />
-              <ProductPage />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/products/:id"
-          element={
-            <>
-              <Navbar route="products" />
-              <SingleProductPage />
-              <Footer />
-            </>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <>
-              <Navbar route="contact" />
-              <ContactPage />
-            </>
-          }
-        />
-        {/* Below are the routes without Navbar Component */}
-        <Route path="/signup" element={<SignUpPage />} />
-        <Route path="/signin" element={<SignInPage />} />
-      </Routes>
-    </>
-  );
+  return <Main />;
 }
 
 export default App;
